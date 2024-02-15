@@ -33,4 +33,4 @@ jobs:
             with:
               name: build
           - name: print working directory
-            run: ls -alh
+            run: ls -R
