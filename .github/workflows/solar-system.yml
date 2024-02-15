@@ -11,6 +11,7 @@ jobs:
     unit-testing:
         name: Unit Testing
         runs-on: ubuntu-latest
+        environment: development
         steps:
         - name: print env
           run: echo $TEST
