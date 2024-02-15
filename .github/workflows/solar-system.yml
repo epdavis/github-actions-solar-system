@@ -28,5 +28,9 @@ jobs:
         environment: development
         needs: artifact
         steps:
-        - name: print working directory
-          run: ls -alh
+          - name: download build artifact
+            uses: actions/download-artifact@v4
+            with:
+              name: build
+          - name: print working directory
+            run: ls -alh
