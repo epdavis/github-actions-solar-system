@@ -3,6 +3,9 @@ name: Solar System Workflow
 on: 
   workflow_dispatch:
   push:
+
+env:
+  KUBECONFIG: ${{ secrets.KUBECONFIG }}
     
 jobs:
     unit-testing:
