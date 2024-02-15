@@ -5,7 +5,7 @@ on:
   push:
 
 env:
-  KUBECONFIG: ${{ secrets.KUBECONFIG }}
+  KUBECONFIG: ${{ secrets.TEST }}
     
 jobs:
     unit-testing:
