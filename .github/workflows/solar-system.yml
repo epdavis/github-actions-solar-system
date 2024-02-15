@@ -13,4 +13,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: print env
-          run: echo $KUBECONFIG
+          run: echo $TEST
