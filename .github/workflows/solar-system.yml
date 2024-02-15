@@ -24,6 +24,7 @@ jobs:
         name: Unit Testing
         runs-on: ubuntu-latest
         environment: development
+        needs: artifact
         steps:
         - name: print working directory
           run: ls -alh
