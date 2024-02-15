@@ -8,10 +8,22 @@ env:
   TEST: ${{ secrets.TEST }}
     
 jobs:
+    artifact:
+        name: upload artifact
+        runs-on: ubuntu-latest
+        environment: development
+        steps:
+          - name: create file
+            run: touch build/test.txt
+          - name: upload build artifact
+            uses: actions/upload-artifact@v4
+            with:
+                name: build
+                path: build
     unit-testing:
         name: Unit Testing
         runs-on: ubuntu-latest
         environment: development
         steps:
-        - name: print env
-          run: echo $TEST
+        - name: print working directory
+          run: ls -alh
